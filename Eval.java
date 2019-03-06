@@ -27,7 +27,7 @@ public class Eval {
     }
     private BigDecimal compute(String oper, BigDecimal op1, BigDecimal op2){
         if (oper.equals("/")){
-            return op1.divide(op2);
+            return op1.divide(op2, MathContext.DECIMAL128);
         }
         else if (oper.equals("*")){
             return op1.multiply(op2);
